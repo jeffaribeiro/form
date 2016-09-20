@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form435.View.RegistrarUsuario">
+
+  <StackLayout Orientation="Vertical">
+    <Label Text="Digite o seu CPF para registrar-se no aplicativo:" StyleId="italic" />
+    <Entry Placeholder="Digite o CPF" />
+    <Button Text="Registrar" Clicked="RegistraUsuario" />
+  </StackLayout>
+
+</ContentPage>

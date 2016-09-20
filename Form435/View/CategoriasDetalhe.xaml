@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form435.View.CategoriasDetalhe">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+  <StackLayout Orientation="Vertical">
+
+      <Label Text="Codigo" StyleId="italic" />
+      <Entry Text="{Binding CODIGO_CATEGORIA}, Mode=TwoWay" />
+
+      <Label Text="Descricao" StyleId="italic" />
+      <Entry Text="{Binding DESCRICAO_CATEGORIA}, Mode=TwoWay" />
+      
+    </StackLayout>
+    
+</ContentPage>

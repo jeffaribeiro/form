@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form435.View.Principal"
+             BackgroundColor="#008B8B">
+  <ContentPage.Content>
+      <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout Orientation="Vertical">
+          <Label Text="Seja bem vindo!" />  
+        </StackLayout>
+        <Button Text="Registrar desvio" Clicked="IrParaCadastro" />
+        <Button Text="Visualizar Desvios Registrados" Clicked="IrParaListagem" />
+        <Button Text="Categorias" Clicked="VerCategorias" />
+      </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form435.View.DesviosCadastroAba01"
+             Title="Informações Gerais">
+
+  <ScrollView Orientation="Vertical">
+
+    <StackLayout Orientation="Vertical">
+
+      <Label Text="Tipo de Registro de Desvio" StyleId="italic" />
+      <Picker Title="Selecione o tipo registro de desvio">
+        <Picker.Items>
+          <x:String>CAC - Cartão de Auditoria Comportamental</x:String>
+          <x:String>CID - Cartão de Identificação de Desvios</x:String>
+          <x:String>IPS - Índice de Prática Insegura</x:String>          
+        </Picker.Items>
+      </Picker>
+      
+      <Label Text="Nome do Auditor" StyleId="italic" />
+      <Entry Text="{Binding form435.NOM_AUDITOR, Mode=TwoWay}" Placeholder="auditor" />
+     
+      <Label Text="Função" StyleId="italic" />
+      <Picker Title="Selecione a função">
+        <Picker.Items>
+          <x:String>DHO</x:String>
+          <x:String>Comercial</x:String>
+          <x:String>Diretoria</x:String>
+          <x:String>Facilities</x:String>
+          <x:String>Financeiro</x:String>
+          <x:String>Fiscal</x:String>
+          <x:String>Manutenção</x:String>
+          <x:String>Operações</x:String>
+          <x:String>SMSQ</x:String>
+          <x:String>Suprimentos</x:String>
+          <x:String>TI</x:String>
+          <x:String>Tripulante</x:String>
+        </Picker.Items>
+      </Picker>
+
+      <Label Text="Local" StyleId="italic" />
+      <Picker Title="Selecione o local">
+        <Picker.Items>
+          <x:String>Base</x:String>
+          <x:String>Embarcação</x:String>          
+        </Picker.Items>
+      </Picker>
+
+      <Label Text="Data" StyleId="italic" />
+      <DatePicker VerticalOptions="CenterAndExpand">
+        <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>        
+      </DatePicker>
+
+      <Label Text="Hora de início" StyleId="italic" />
+      <TimePicker VerticalOptions="CenterAndExpand">
+        <TimePicker.Format>HH:mm</TimePicker.Format>
+      </TimePicker>
+
+      <Label Text="Hora de término" StyleId="italic" />
+      <TimePicker VerticalOptions="CenterAndExpand">
+        <TimePicker.Format>HH:mm</TimePicker.Format>
+      </TimePicker>
+
+    </StackLayout>
+
+  </ScrollView>
+
+
+</ContentPage>

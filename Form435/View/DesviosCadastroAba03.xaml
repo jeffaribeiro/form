@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form435.View.DesviosCadastroAba03"
+             Title="Observações">
+  <ScrollView Orientation="Vertical">
+
+    <StackLayout Orientation="Vertical">
+
+      <Label Text="Tipo de Observação" StyleId="italic" />
+      <Picker Title="Selecione o Tipo de Observação">
+        <Picker.Items>
+          <x:String>Ação Insegura</x:String>
+          <x:String>Condição Insegura</x:String>
+        </Picker.Items>
+      </Picker>
+
+      <Label Text="Descrição dos desvios" StyleId="italic" />
+      <Editor Keyboard="Default" />
+
+      <Label Text="Ação/Recomendação" StyleId="italic" />
+      <Editor Keyboard="Default" Text="{Binding form435.ACAO_RECOMENDACAO, Mode=TwoWay}" />
+
+      <Label Text="Reconhecimento do trabalho seguro" StyleId="italic" />
+      <Editor Keyboard="Default"  Text="{Binding form435.RECONHECIMENTO_TRAB_SEGURO, Mode=TwoWay}" />
+
+      <Label Text="Observações" StyleId="italic" />
+      <Editor Keyboard="Default"  Text="{Binding form435.OBSERVACOES, Mode=TwoWay}" />
+
+    </StackLayout>
+  
+  </ScrollView>
+
+</ContentPage>

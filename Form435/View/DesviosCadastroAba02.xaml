@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form435.View.DesviosCadastroAba02"
+             Title="Desvios Observados">
+
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+      <!--<ListView ItemsSource="{Binding desvioCorrente, Mode=TwoWay}" HasUnevenRows="True" SeparatorVisibility="Default" BackgroundColor="#008B8B">-->
+      <!--<ListView x:Name="DesviosObservadosListView" HasUnevenRows="True" SeparatorVisibility="Default" BackgroundColor="#008B8B">-->
+      <ListView x:Name="DesviosObservadosListView" ItemsSource="Binding Respostas" HasUnevenRows="True" SeparatorVisibility="Default" BackgroundColor="#008B8B">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                <StackLayout Orientation="Vertical">
+                  <BoxView Color="Blue" HeightRequest="1" />
+                  <StackLayout Orientation="Horizontal">                      
+                      <Label Text="{Binding DETALHE_CATEGORIA}" Font="Bold,Large" TextColor="Black" HorizontalOptions="StartAndExpand" />
+                  </StackLayout>
+                  <StackLayout Orientation="Horizontal" IsVisible="{Binding EH_CATEGORIA_FILHA}">
+                    <Label x:Name="quantidadeLabel"
+                           BindingContext="{x:Reference quantidadeStepper}"
+                           Grid.Row="0" Grid.Column="2"
+                           Text="{Binding Value, StringFormat='Desvios encontrados: {0}'}"
+                           Font="Large"
+                           TextColor="Black"
+                           HorizontalOptions="StartAndExpand" />
+                    <Stepper x:Name="quantidadeStepper"
+                             BindingContext="{x:Reference quantidadeLabel}"
+                             Grid.Row="0" Grid.Column="0"
+                             Minimum="0" Maximum="100" Increment="1"
+                             Value="{Binding QUANTIDADE, Mode=TwoWay}"                             
+                             Grid.ColumnSpan="2"
+                             HorizontalOptions="End" />
+                  </StackLayout>
+                </StackLayout>
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+
+
+
+</ContentPage>

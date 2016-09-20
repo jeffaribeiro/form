@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Form435.View.CategoriasListView">
+  <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+  <Label Text="Teste de tela"  VerticalOptions="Center" HorizontalOptions="Center" />-->
+ 
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Name="Add" Activated="OnAdd" Order="Primary" Priority="0" />
+  </ContentPage.ToolbarItems>
+
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+      <ListView ItemsSource="{Binding listaCategorias}" ItemSelected="OnSelect" HasUnevenRows="True" SeparatorVisibility="Default">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                <StackLayout Orientation="Vertical">
+                  <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding DETALHE_CATEGORIA}" Font="Bold,Large" HorizontalOptions="StartAndExpand" />                    
+                  </StackLayout>                  
+                </StackLayout>
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
